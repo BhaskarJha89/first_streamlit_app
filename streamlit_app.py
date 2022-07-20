@@ -16,8 +16,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 st.header("Fruityvice Fruit Advice!")
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+#st.text(fruityvice_response.json())
 # Take the Json version of response and normalize it
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # Output it the screen as a Table
